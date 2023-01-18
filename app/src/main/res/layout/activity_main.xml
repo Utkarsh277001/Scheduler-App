@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F8CFC2"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#F15F31"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ly"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#F15F31"
+            android:orientation="horizontal">
+            <View
+                android:id="@+id/hghvw"
+                android:layout_width="20dp"
+                app:layout_constraintStart_toStartOf="@id/ly"
+                app:layout_constraintEnd_toEndOf="@id/highbtn"
+                android:padding="10dp"
+                android:layout_height="20dp"
+                android:background="@drawable/dothigh"
+                android:drawableStart="@drawable/dothigh"
+                />
+
+            <TextView
+                android:id="@+id/highbtn"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/hghvw"
+                app:layout_constraintEnd_toEndOf="@id/medvw"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/salsa"
+                android:text="High Priority task             "
+                android:paddingTop="5dp"
+                android:textSize="9dp" />
+
+            <View
+                android:id="@+id/medvw"
+                android:layout_width="20dp"
+                app:layout_constraintStart_toStartOf="@id/highbtn"
+                app:layout_constraintEnd_toEndOf="@id/midbtn"
+                android:layout_height="20dp"
+                android:background="@drawable/dotmid"
+                android:drawableStart="@drawable/dotmid"
+               />
+
+            <TextView
+                android:id="@+id/midbtn"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/medvw"
+                app:layout_constraintEnd_toEndOf="@id/lowvw"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/salsa"
+                android:paddingTop="5dp"
+                android:text="Medium Priority Task           "
+                android:textSize="9dp" />
+
+            <View
+                android:id="@+id/lowvw"
+                android:layout_width="20dp"
+                app:layout_constraintStart_toStartOf="@id/midbtn"
+                app:layout_constraintEnd_toEndOf="@id/Lowbtn"
+                android:layout_height="20dp"
+                android:background="@drawable/dotlow"
+                android:drawableStart="@drawable/dotlow"/>
+
+
+            <TextView
+                android:id="@+id/Lowbtn"
+                app:layout_constraintStart_toStartOf="@id/lowvw"
+                app:layout_constraintEnd_toEndOf="@id/ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/salsa"
+                android:paddingTop="5dp"
+                android:text="Low prioriy Task "
+                android:textSize="9dp" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Fabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="bottom|end"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#F15F31"
+        android:src="@drawable/ic_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
